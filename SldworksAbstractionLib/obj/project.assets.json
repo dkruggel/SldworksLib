@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dkruggel\\source\\repos\\SldworksAbstractionLib\\SldworksAbstractionLib\\SldworksAbstractionLib.vbproj",
+      "projectUniqueName": "C:\\Users\\dkruggel\\Source\\Repos\\SldworksLib\\SldworksAbstractionLib\\SldworksAbstractionLib.vbproj",
       "projectName": "SldworksAbstractionLib",
-      "projectPath": "C:\\Users\\dkruggel\\source\\repos\\SldworksAbstractionLib\\SldworksAbstractionLib\\SldworksAbstractionLib.vbproj",
+      "projectPath": "C:\\Users\\dkruggel\\Source\\Repos\\SldworksLib\\SldworksAbstractionLib\\SldworksAbstractionLib.vbproj",
       "packagesPath": "C:\\Users\\dkruggel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dkruggel\\source\\repos\\SldworksAbstractionLib\\SldworksAbstractionLib\\obj\\",
+      "outputPath": "C:\\Users\\dkruggel\\Source\\Repos\\SldworksLib\\SldworksAbstractionLib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -4,18 +4,18 @@ Namespace DimensionAbstractions
     Public Module DimensionAbstractions
 
         <Extension>
-        Public Function DriveDimensionValue(ByVal modelObj As ModelDoc2, ByVal DimName As String, ByVal DimVal As Double, Optional ByVal Tolerance As Double = 0.0) As Integer
+        Public Function DriveDimensionValue(ByVal modelObj As ModelDoc2, ByVal dimName As String, ByVal dimVal As Double, Optional ByVal toleranceVal As Double = 0.0) As Integer
             Dim retVal As Integer '-1 = failure, 0 = dimension not selected, 1 = success
             Dim ext As ModelDocExtension = modelObj.Extension
             Dim selMgr As SelectionMgr = modelObj.SelectionManager
             Dim dispDim As DisplayDimension, dimObj As Dimension
 
             Try
-                Dim bool As Boolean = ext.SelectByID2(DimName, "DIMENSION", 0, 0, 0, False, 0, Nothing, 0)
+                Dim bool As Boolean = ext.SelectByID2(dimName, "DIMENSION", 0, 0, 0, False, 0, Nothing, 0)
                 If bool Then
                     dispDim = selMgr.GetSelectedObject6(1, -1)
                     dimObj = dispDim.GetDimension
-                    dimObj.SystemValue = DimVal
+                    dimObj.SystemValue = dimVal
                     retVal = 1
                     modelObj.ClearSelection2(True)
                 Else
@@ -30,14 +30,14 @@ Namespace DimensionAbstractions
         End Function
 
         <Extension>
-        Public Function CheckDimensionValue(ByVal modelObj As ModelDoc2, ByVal DimName As String) As Double
+        Public Function CheckDimensionValue(ByVal modelObj As ModelDoc2, ByVal dimName As String) As Double
             Dim retVal As Double = 0.0
             Dim ext As ModelDocExtension = modelObj.Extension
             Dim selMgr As SelectionMgr = modelObj.SelectionManager
             Dim dispDim As DisplayDimension, dimObj As Dimension
 
             Try
-                Dim bool As Boolean = ext.SelectByID2(DimName, "DIMENSION", 0, 0, 0, False, 0, Nothing, 0)
+                Dim bool As Boolean = ext.SelectByID2(dimName, "DIMENSION", 0, 0, 0, False, 0, Nothing, 0)
                 If bool Then
                     dispDim = selMgr.GetSelectedObject6(1, -1)
                     dimObj = dispDim.GetDimension
