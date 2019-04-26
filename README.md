@@ -1,0 +1,2 @@
+# SldworksLib
+Custom Solidworks functions
