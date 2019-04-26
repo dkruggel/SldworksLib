@@ -1,0 +1,12 @@
+C:\Users\dkruggel\source\repos\SldworksAbstractionLib\SldworksAbstractionLib\bin\Debug\netstandard2.0\SldworksAbstractionLib.deps.json
+C:\Users\dkruggel\source\repos\SldworksAbstractionLib\SldworksAbstractionLib\bin\Debug\netstandard2.0\SldworksAbstractionLib.dll
+C:\Users\dkruggel\source\repos\SldworksAbstractionLib\SldworksAbstractionLib\bin\Debug\netstandard2.0\SldworksAbstractionLib.pdb
+C:\Users\dkruggel\source\repos\SldworksAbstractionLib\SldworksAbstractionLib\bin\Debug\netstandard2.0\Interop.SldWorks.dll
+C:\Users\dkruggel\source\repos\SldworksAbstractionLib\SldworksAbstractionLib\obj\Debug\netstandard2.0\SldworksAbstractionLib.vbprojAssemblyReference.cache
+C:\Users\dkruggel\source\repos\SldworksAbstractionLib\SldworksAbstractionLib\obj\Debug\netstandard2.0\Interop.SldWorks.dll
+C:\Users\dkruggel\source\repos\SldworksAbstractionLib\SldworksAbstractionLib\obj\Debug\netstandard2.0\SldworksAbstractionLib.vbproj.ResolveComReference.cache
+C:\Users\dkruggel\source\repos\SldworksAbstractionLib\SldworksAbstractionLib\obj\Debug\netstandard2.0\SldworksAbstractionLib.vbproj.CoreCompileInputs.cache
+C:\Users\dkruggel\source\repos\SldworksAbstractionLib\SldworksAbstractionLib\obj\Debug\netstandard2.0\SldworksAbstractionLib.AssemblyInfoInputs.cache
+C:\Users\dkruggel\source\repos\SldworksAbstractionLib\SldworksAbstractionLib\obj\Debug\netstandard2.0\SldworksAbstractionLib.AssemblyInfo.vb
+C:\Users\dkruggel\source\repos\SldworksAbstractionLib\SldworksAbstractionLib\obj\Debug\netstandard2.0\SldworksAbstractionLib.dll
+C:\Users\dkruggel\source\repos\SldworksAbstractionLib\SldworksAbstractionLib\obj\Debug\netstandard2.0\SldworksAbstractionLib.pdb
