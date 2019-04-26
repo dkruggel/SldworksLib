@@ -24,6 +24,14 @@
       <Lcid>0</Lcid>
       <Isolated>false</Isolated>
     </COMReference>
+    <COMReference Include="SwConst.dll">
+      <Guid>4687f359-55d0-4cd3-b6cf-2eb42c11f989</Guid>
+      <VersionMajor>25</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+    </COMReference>
   </ItemGroup>
 
 </Project>

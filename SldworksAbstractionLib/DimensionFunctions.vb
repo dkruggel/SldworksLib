@@ -1,4 +1,4 @@
-Imports SldWorks, System.Runtime.CompilerServices
+Imports SldWorks, System.Runtime.CompilerServices, SwConst
 
 Namespace DimensionAbstractions
     Public Module DimensionAbstractions
@@ -31,7 +31,7 @@ Namespace DimensionAbstractions
 
         <Extension>
         Public Function CheckDimensionValue(ByVal modelObj As ModelDoc2, ByVal dimName As String) As Double
-            Dim retVal As Double = 0.0
+            Dim retVal As Double = 0.0 '-1.0 = failure
             Dim ext As ModelDocExtension = modelObj.Extension
             Dim selMgr As SelectionMgr = modelObj.SelectionManager
             Dim dispDim As DisplayDimension, dimObj As Dimension
@@ -52,7 +52,11 @@ Namespace DimensionAbstractions
         End Function
 
         <Extension>
-        Public Function DriveDimensionPlacement(ByVal modelObj As ModelDoc2, ByVal dimName As String, ByVal xPos As Double, ByVal yPos As Double, ByVal cntr As Boolean, ByVal hide As Boolean) As Integer
+        Public Function DriveDimensionPlacement(ByVal modelObj As ModelDoc2, ByVal dimName As String, ByVal xPos As Double, ByVal yPos As Double,
+                                                Optional ByVal cntr As Boolean = False, Optional ByVal hide As Boolean = False, Optional ByVal textToDrive As String = "",
+                                                Optional ByVal textPos As swDimensionTextParts_e = swDimensionTextParts_e.swDimensionTextCalloutBelow,
+                                                Optional ByVal arrowSide As swArrowDirection_e = swArrowDirection_e.swSMART) As Integer
+            Dim retVal As Integer '-1 = failure, 1 = success
             Dim bool As Boolean, dispDim As DisplayDimension, annObj As Annotation
             Dim ext As ModelDocExtension = modelObj.Extension
             Dim selMgr As SelectionMgr = modelObj.SelectionManager
@@ -63,19 +67,27 @@ Namespace DimensionAbstractions
                     dispDim = selMgr.GetSelectedObject6(1, -1)
                     annObj = dispDim.GetAnnotation
                     If hide Then
-                        modelObj.HideDimension()
+                        annObj.Visible = swAnnotationVisibilityState_e.swAnnotationHidden
                         modelObj.ClearSelection2(True)
                     Else
                         bool = annObj.SetPosition2(xPos, yPos, 0)
                         dispDim.CenterText = cntr
                     End If
+                    If Not textToDrive = "" Then
+                        dispDim.SetText(textPos, textToDrive)
+                    End If
+                    If Not arrowSide = swArrowDirection_e.swSMART Then
+                        dispDim.ArrowSide = arrowSide
+                    End If
+                    retVal = 1
                     modelObj.GraphicsRedraw2()
                 End If
             Catch ex As Exception
-                Return -1
+                retVal = -1
+                Return retVal
             End Try
 
-            Return 1
+            Return retVal
         End Function
 
     End Module
